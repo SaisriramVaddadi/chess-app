@@ -1,0 +1,70 @@
+.chess-board {
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    /* Set the total width of the chessboard */
+    height: 750px;
+    /* Set the total height of the chessboard */
+    border: 2px solid #333;
+    /* Border around the chessboard */
+}
+
+.board-row {
+    display: flex;
+    flex: 1;
+    /* Each row takes up equal space */
+}
+
+.square {
+    flex: 1;
+    /* Each square takes up equal space within the row */
+    display: flex;
+    justify-content: center;
+    /* Center the piece within the square */
+    align-items: center;
+    /* Center the piece vertically */
+    font-size: 3rem;
+    /* Adjust the size of the chess pieces */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.white {
+    background-color: #fff;
+    /* White square color */
+}
+
+.black {
+    background-color: #777;
+    /* Dark square color */
+}
+
+/* Optional hover effect */
+.square:hover,
+.square .selected {
+    background-color: rgba(255, 255, 0, 0.5);
+    /* Highlight square on hover */
+}
+
+/* Optional styling for pieces */
+.piece {
+    color: inherit;
+    /* Inherit color from the square's background for visibility */
+    cursor: pointer;
+    /* Change cursor to pointer for interactivity */
+}
+
+/* You can also add some responsive styling */
+@media (max-width: 600px) {
+    .chess-board {
+        width: 300px;
+        /* Responsive width */
+        height: 300px;
+        /* Responsive height */
+    }
+
+    .piece {
+        font-size: 1.5rem;
+        /* Smaller pieces on smaller screens */
+    }
+}
